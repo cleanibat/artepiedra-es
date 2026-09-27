@@ -328,15 +328,17 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:500;line-height:1.12;letter-spa
   .faq-side{position:static}
   .footer-grid{grid-template-columns:1fr 1fr}
 }
-@media(max-width:860px){
-  .js .rv{opacity:1;transform:none;transition:none}
+@media(max-width:1120px){
   .nav{display:none}
   .nav-toggle{display:block}
-  .header-actions .btn{display:none}
-  .header .tel span{display:none}
   .nav.is-open{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;gap:0;background:var(--tierra);border-bottom:1px solid var(--linea-oscura);padding:10px 22px 18px}
   .nav.is-open a{padding:14px 0;border-bottom:1px solid var(--linea-oscura);font-size:16px}
   .nav.is-open a:last-child{border-bottom:0}
+}
+@media(max-width:860px){
+  .js .rv{opacity:1;transform:none;transition:none}
+  .header-actions .btn{display:none}
+  .header .tel span{display:none}
   .cifras-grid{grid-template-columns:repeat(2,1fr)}
   .cifra:nth-child(2){border-right:0}
   .cifra:nth-child(-n+2){border-bottom:1px solid var(--linea-oscura)}
