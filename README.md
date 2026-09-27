@@ -29,7 +29,7 @@ artepiedra-es/
 4. **Google Tag Manager** — descomentar el bloque GTM en `<head>` y poner el ID real.
    Eventos ya enviados al dataLayer: `generate_lead`, `click_to_call`, `cta_click`, `form_start`, `ba_slider_used`, `lead_thank_you_page` (en gracias.html).
 5. **Dominio** — cuando exista un dominio propio, actualizar las URLs `https://cleanibat.github.io/artepiedra-es/` (canonical, OG, JSON-LD, `_next` del formulario, sitemap, robots).
-6. **Zona** — por defecto Madrid + Toledo, Guadalajara, Segovia y Ávila. Cambiar en la sección `#zonas`, el FAQ, el JSON-LD y el `<title>`/meta description.
+6. **Zona** — por defecto Andalucía (base Málaga / Costa del Sol + Sevilla, Granada, Córdoba, Cádiz, Almería, Jaén, Huelva). Cambiar en la sección `#zonas`, el FAQ, el JSON-LD y el `<title>`/meta description.
 7. **Cifras y opiniones** — «+350 fachadas», «87 opiniones», «4,9/5» y los testimonios son de ejemplo: sustituir por datos reales.
 
 ## Publicación
