@@ -1,4 +1,4 @@
-/* ArtePiedra — interacciones + eventos de conversión (dataLayer) */
+/* PiedraSur — interacciones + eventos de conversión (dataLayer) */
 (function () {
   "use strict";
   var dl = (window.dataLayer = window.dataLayer || []);
@@ -63,16 +63,15 @@
     });
   });
 
-  /* Formulario */
-  var form = document.getElementById("presuForm"), card = document.getElementById("formCard");
-  if (form) {
+  /* Formularios (rápido en el hero + completo) */
+  function wireForm(form, card, leadName) {
+    if (!form) return;
     var started = false;
-    form.addEventListener("focusin", function () { if (!started) { started = true; push("form_start"); } });
+    form.addEventListener("focusin", function () { if (!started) { started = true; push("form_start", { form: leadName }); } });
     form.addEventListener("submit", function (e) {
-      // Validación nativa con mensajes visibles
       if (!form.checkValidity()) { e.preventDefault(); form.reportValidity(); return; }
       var tipo = form.querySelector("#tipo"), sup = form.querySelector("#superficie");
-      push("generate_lead", { project_type: tipo && tipo.value, surface: sup && sup.value });
+      push("generate_lead", { form: leadName, project_type: tipo && tipo.value, surface: sup && sup.value });
       // Modo demostración: mientras el email de FormSubmit no esté configurado, mostramos la confirmación en la página.
       if (/CAMBIAR@EMAIL/.test(form.getAttribute("action") || "")) {
         e.preventDefault();
@@ -84,6 +83,8 @@
       }
     });
   }
+  wireForm(document.getElementById("presuForm"), document.getElementById("formCard"), "completo");
+  wireForm(document.getElementById("miniForm"), document.getElementById("miniCard"), "rapido");
 
   /* Año en el pie */
   var y = document.getElementById("year"); if (y) y.textContent = new Date().getFullYear();

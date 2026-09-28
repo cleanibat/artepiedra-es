@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /gracias.html
-Sitemap: https://cleanibat.github.io/artepiedra-es/sitemap.xml
+Sitemap: https://cleanibat.github.io/piedrasur-es/sitemap.xml
